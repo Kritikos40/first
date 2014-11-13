@@ -1,0 +1,336 @@
+<html><!-- #BeginTemplate "/Templates/wedtemp.dwt" --> 
+2 <head> 
+3 
+ 
+4 
+ 
+5 <script type="text/javascript" src="/static/js/analytics.js"></script> 
+6 <link type="text/css" rel="stylesheet" href="/static/css/banner-styles.css"/> 
+7 
+ 
+8 
+ 
+9 <!-- #BeginEditable "doctitle" -->  
+10 <title>Nick & Amy's Wedding Site</title> 
+11 <!-- #EndEditable -->  
+12 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+13 </head> 
+14 
+ 
+15 <body bgcolor="#FFFFFF"> 
+16 
+ 
+17 
+ 
+18 <!-- BEGIN WAYBACK TOOLBAR INSERT --> 
+19 <script> if (window.archive_analytics) { window.archive_analytics.values['server_name']="wwwb-app13.us.archive.org";}; </script> 
+20 
+ 
+21 <script type="text/javascript" src="/static/js/disclaim-element.js" ></script> 
+22 <script type="text/javascript" src="/static/js/graph-calc.js" ></script> 
+23 <script type="text/javascript" src="/static/jflot/jquery.min.js" ></script> 
+24 <script type="text/javascript"> 
+25 var __wm = (function(){ 
+26 var wbPrefix = "/web/"; 
+27 var wbCurrentUrl = "http://www.nickandamy.com/Honeymoon/honeymoon.htm"; 
+28  
+29 var firstYear = 1996; 
+30 var imgWidth = 475,imgHeight = 27; 
+31 var yearImgWidth = 25,monthImgWidth = 2; 
+32 var displayDay = "3"; 
+33 var displayMonth = "Feb"; 
+34 var displayYear = "2001"; 
+35 var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]; 
+36 var $D=document,$=function(n){return document.getElementById(n)}; 
+37 var trackerVal,curYear = -1,curMonth = -1; 
+38 var yearTracker,monthTracker; 
+39 function showTrackers(val) { 
+40   if (val===trackerVal) return; 
+41   var $ipp=$("wm-ipp"); 
+42   var $y=$("displayYearEl"),$m=$("displayMonthEl"),$d=$("displayDayEl"); 
+43   if (val) { 
+44     $ipp.className="hi"; 
+45   } else { 
+46     $ipp.className=""; 
+47     $y.innerHTML=displayYear;$m.innerHTML=displayMonth;$d.innerHTML=displayDay; 
+48   } 
+49   yearTracker.style.display=val?"inline":"none"; 
+50   monthTracker.style.display=val?"inline":"none"; 
+51   trackerVal = val; 
+52 } 
+53 function getElementX2(obj) { 
+54   var $e=jQuery(obj); 
+55   return (typeof $e=="undefined"||typeof $e.offset=="undefined")? 
+56     getElementX(obj):Math.round($e.offset().left); 
+57 } 
+58 function trackMouseMove(event,element) { 
+59   var eventX = getEventX(event); 
+60   var elementX = getElementX2(element); 
+61   var xOff = Math.min(Math.max(0, eventX - elementX),imgWidth); 
+62   var monthOff = xOff % yearImgWidth; 
+63  
+64   var year = Math.floor(xOff / yearImgWidth); 
+65   var monthOfYear = Math.min(11,Math.floor(monthOff / monthImgWidth)); 
+66   // 1 extra border pixel at the left edge of the year: 
+67   var month = (year * 12) + monthOfYear; 
+68   var day = monthOff % 2==1?15:1; 
+69   var dateString = zeroPad(year + firstYear) + zeroPad(monthOfYear+1,2) + 
+70     zeroPad(day,2) + "000000"; 
+71  
+72   $("displayYearEl").innerHTML=year+firstYear; 
+73   $("displayMonthEl").innerHTML=prettyMonths[monthOfYear]; 
+74   // looks too jarring when it changes.. 
+75   //$("displayDayEl").innerHTML=zeroPad(day,2); 
+76   var url = wbPrefix + dateString + '/' +  wbCurrentUrl; 
+77   $("wm-graph-anchor").href=url; 
+78  
+79   if(curYear != year) { 
+80     var yrOff = year * yearImgWidth; 
+81     yearTracker.style.left = yrOff + "px"; 
+82     curYear = year; 
+83   } 
+84   if(curMonth != month) { 
+85     var mtOff = year + (month * monthImgWidth) + 1; 
+86     monthTracker.style.left = mtOff + "px"; 
+87     curMonth = month; 
+88   } 
+89 } 
+90 function hideToolbar() { 
+91   $("wm-ipp").style.display="none"; 
+92 } 
+93 function bootstrap() { 
+94   var $spk=$("wm-ipp-sparkline"); 
+95   yearTracker=$D.createElement('div'); 
+96   yearTracker.className='yt'; 
+97   with(yearTracker.style){ 
+98     display='none';width=yearImgWidth+"px";height=imgHeight+"px"; 
+99   } 
+100   monthTracker=$D.createElement('div'); 
+101   monthTracker.className='mt'; 
+102   with(monthTracker.style){ 
+103     display='none';width=monthImgWidth+"px";height=imgHeight+"px"; 
+104   } 
+105   $spk.appendChild(yearTracker); 
+106   $spk.appendChild(monthTracker); 
+107  
+108   var $ipp=$("wm-ipp"); 
+109   $ipp&&disclaimElement($ipp); 
+110 } 
+111 return{st:showTrackers,mv:trackMouseMove,h:hideToolbar,bt:bootstrap}; 
+112 })(); 
+113 </script> 
+114 <style type="text/css"> 
+115 body { 
+116   margin-top:0 !important; 
+117   padding-top:0 !important; 
+118   min-width:800px !important; 
+119 } 
+120 </style> 
+121 <div id="wm-ipp" lang="en" style="display:none;"> 
+122 
+ 
+123 <div style="position:fixed;left:0;top:0;width:100%!important"> 
+124 <div id="wm-ipp-inside"> 
+125    <table style="width:100%;"><tbody><tr> 
+126    <td id="wm-logo"> 
+127        <a href="/web/" title="Wayback Machine home page"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"></a> 
+128    </td> 
+129    <td class="c"> 
+130        <table style="margin:0 auto;"><tbody><tr> 
+131        <td class="u" colspan="2"> 
+132        <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb"><input type="text" name="url" id="wmtbURL" value="http://www.nickandamy.com/Honeymoon/honeymoon.htm" style="width:400px;" onfocus="this.focus();this.select();"><input type="hidden" name="type" value="replay"><input type="hidden" name="date" value="20010203143700"><input type="submit" value="Go"><span id="wm_tb_options" style="display:block;"></span></form> 
+133        </td> 
+134        <td class="n" rowspan="2"> 
+135            <table><tbody> 
+136            <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR --> 
+137            <tr class="m"> 
+138            	<td class="b" nowrap="nowrap"> 
+139 		 
+140 		    <a href="/web/20001204154100/http://www.nickandamy.com/Honeymoon/honeymoon.htm" title="4 Dec 2000">DEC</a> 
+141 		 
+142 		</td> 
+143 		<td class="c" id="displayMonthEl" title="You are here: 14:37:00 Feb 3, 2001">FEB</td> 
+144 		<td class="f" nowrap="nowrap"> 
+145 		 
+146 		    <a href="/web/20010331205548/http://www.nickandamy.com/Honeymoon/honeymoon.htm" title="31 Mar 2001"><strong>MAR</a> 
+147 		 
+148                 </td> 
+149 	    </tr> 
+150            <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR --> 
+151            <tr class="d"> 
+152                <td class="b" nowrap="nowrap"> 
+153                 
+154                    <a href="/web/20001204154100/http://www.nickandamy.com/Honeymoon/honeymoon.htm" title="15:41:00 Dec 4, 2000"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a> 
+155                 
+156                </td> 
+157                <td class="c" id="displayDayEl" style="width:34px;font-size:24px;" title="You are here: 14:37:00 Feb 3, 2001">3</td> 
+158 	       <td class="f" nowrap="nowrap"> 
+159                 
+160 		   <a href="/web/20010331205548/http://www.nickandamy.com/Honeymoon/honeymoon.htm" title="20:55:48 Mar 31, 2001"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a> 
+161 	        
+162 	       </td> 
+163            </tr> 
+164            <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR --> 
+165            <tr class="y"> 
+166 	       <td class="b" nowrap="nowrap"> 
+167                 
+168                    2000 
+169                 
+170                </td> 
+171                <td class="c" id="displayYearEl" title="You are here: 14:37:00 Feb 3, 2001">2001</td> 
+172 	       <td class="f" nowrap="nowrap"> 
+173                 
+174 	           <a href="/web/20020610023451/http://www.nickandamy.com/Honeymoon/honeymoon.htm" title="10 Jun 2002"><strong>2002</strong></a> 
+175 	        
+176 	       </td> 
+177            </tr> 
+178            </tbody></table> 
+179        </td> 
+180        </tr> 
+181        <tr> 
+182        <td class="s"> 
+183            <a class="t" href="/web/20010203143700*/http://www.nickandamy.com/Honeymoon/honeymoon.htm" title="See a list of every capture for this URL">17 captures</a> 
+184            <div class="r" title="Timespan for captures of this URL">25 Oct 00 - 6 Feb 05</div> 
+185        </td> 
+186        <td class="k"> 
+187        <a href="" id="wm-graph-anchor"> 
+188        <div id="wm-ipp-sparkline" title="Explore captures for this URL"> 
+189 	 <img id="sparklineImgId" alt="sparklines" 
+190 		 onmouseover="__wm.st(1)" onmouseout="__wm.st(0)" 
+191 		 onmousemove="__wm.mv(event,this)" 
+192 		 width="475" 
+193 		 height="27" 
+194 		 border="0" 
+195 		 src="/web/jsp/graph.jsp?graphdata=475_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000101_2001:1:011101010201_2002:-1:010001000000_2003:-1:000000000000_2004:-1:000101010001_2005:-1:010000000000_2006:-1:000000000000_2007:-1:000000000000_2008:-1:000000000000_2009:-1:000000000000_2010:-1:000000000000_2011:-1:000000000000_2012:-1:000000000000_2013:-1:000000000000_2014:-1:000000000000"> 
+196        </div> 
+197        </a> 
+198        </td> 
+199        </tr></tbody></table> 
+200    </td> 
+201    <td class="r"> 
+202        <a href="#close" onclick="__wm.h();return false;" style="background-image:url(/static/images/toolbar/wm_tb_close.png);top:5px;" title="Close the toolbar">Close</a> 
+203        <a href="http://faq.web.archive.org/" style="background-image:url(/static/images/toolbar/wm_tb_help.png);bottom:5px;" title="Get some help using the Wayback Machine">Help</a> 
+204    </td> 
+205    </tr></tbody></table> 
+206 </div> 
+207 </div> 
+208 </div> 
+209 <script type="text/javascript">__wm.bt();</script> 
+210 <!-- END WAYBACK TOOLBAR INSERT --> 
+211 
+ 
+212 <p align="center"><img src="/web/20010203143700im_/http://www.nickandamy.com/images/Toolbar2.jpg" width="574" height="40" border="0" usemap="#Toolbar" align="absmiddle"></p> 
+213 <div align="center"><!-- #BeginEditable "Content" -->  
+214   <p><b>Pictures from our honeymoon in Bora Bora &amp; Moorea!!!</b></p> 
+215   <p>&nbsp;</p> 
+216   <p><img src="/web/20010203143700im_/http://www.nickandamy.com/Honeymoon/images/boraview2.jpg" width="500" height="148"></p> 
+217   <p><b>Beautiful Bora Bora as you travel from the local airport to your hotel  
+218     by boat.</b></p> 
+219   <p>&nbsp;</p> 
+220   <p><img src="/web/20010203143700im_/http://www.nickandamy.com/Honeymoon/images/bblr.jpg" width="400" height="210"> </p> 
+221   <p><b>Bora Bora Lagoon Resort as seen from the &quot;main island&quot; of Bora  
+222     Bora. </b></p> 
+223   <p>&nbsp;</p> 
+224   <table width="75%" border="0" cellspacing="0" cellpadding="0"> 
+225     <tr>  
+226       <td width="54%"><img src="/web/20010203143700im_/http://www.nickandamy.com/Honeymoon/images/overwater.jpg" width="300" height="195"></td> 
+227       <td width="45%">  
+228         <div align="center"><b>Amy standing in the doorway of our overwater love  
+229           nest.</b></div> 
+230       </td> 
+231       <td width="1%">&nbsp;</td> 
+232     </tr> 
+233     <tr>  
+234       <td width="54%">  
+235         <div align="center"><b>Love nest interior.</b></div> 
+236       </td> 
+237       <td width="45%"><img src="/web/20010203143700im_/http://www.nickandamy.com/Honeymoon/images/bblrroom.jpg" width="250" height="155"></td> 
+238       <td width="1%">&nbsp;</td> 
+239     </tr> 
+240     <tr>  
+241       <td width="54%"><img src="/web/20010203143700im_/http://www.nickandamy.com/Honeymoon/images/boraboramtn.jpg" width="400" height="252"></td> 
+242       <td width="45%">  
+243         <div align="center">  
+244           <p><b>View from the love nest's back deck.</b></p> 
+245           <p>&nbsp;</p> 
+246           <p><b>Aaaah, Paradise...</b></p> 
+247         </div> 
+248       </td> 
+249       <td width="1%">&nbsp;</td> 
+250     </tr> 
+251   </table> 
+252   <p><img src="/web/20010203143700im_/http://www.nickandamy.com/Honeymoon/images/boraview.jpg" width="500" height="162"></p> 
+253   <p><b>From the Love Nest deck again, that ship is the Paul Gaugin.</b></p> 
+254   <p>&nbsp;</p> 
+255   <p><img src="/web/20010203143700im_/http://www.nickandamy.com/Honeymoon/images/panobora.jpg" width="500" height="167"></p> 
+256   <p><b>Bora Bora = Beautiful Views</b></p> 
+257   <p>&nbsp;</p> 
+258   <p><img src="/web/20010203143700im_/http://www.nickandamy.com/Honeymoon/images/panobora2.jpg" width="500" height="167"></p> 
+259   <p><b>See? Look at that blue...</b></p> 
+260   <p>&nbsp;</p> 
+261   <table width="75%" border="0" cellspacing="0" cellpadding="0"> 
+262     <tr>  
+263       <td width="1%">&nbsp;</td> 
+264       <td width="43%">  
+265         <p align="center"><b>Here we are visiting world famous</b></p> 
+266         <p align="center"><b>Bloody Mary's.</b></p> 
+267       </td> 
+268       <td width="56%"><img src="/web/20010203143700im_/http://www.nickandamy.com/Honeymoon/images/bloodymarys.jpg" width="300" height="212"></td> 
+269     </tr> 
+270     <tr>  
+271       <td width="1%">&nbsp;</td> 
+272       <td width="43%"><img src="/web/20010203143700im_/http://www.nickandamy.com/Honeymoon/images/ksoverborabora.jpg" width="300" height="183"></td> 
+273       <td width="56%">  
+274         <div align="center"><b>Newlyweds over Bora Bora.</b></div> 
+275       </td> 
+276     </tr> 
+277     <tr>  
+278       <td width="1%">&nbsp;</td> 
+279       <td width="43%">  
+280         <div align="center"><b>Another stunning view.</b></div> 
+281       </td> 
+282       <td width="56%"><img src="/web/20010203143700im_/http://www.nickandamy.com/Honeymoon/images/boraview3.jpg" width="400" height="258"></td> 
+283     </tr> 
+284   </table> 
+285   <p>&nbsp;</p> 
+286   <p><img src="/web/20010203143700im_/http://www.nickandamy.com/Honeymoon/images/mooreapano.jpg" width="500" height="92"></p> 
+287   <p><b>Panoramic view of Moorea from Belvedere Point.</b></p> 
+288   <p>&nbsp;</p> 
+289   <table width="75%" border="0" cellspacing="0" cellpadding="0"> 
+290     <tr>  
+291       <td width="53%"><img src="/web/20010203143700im_/http://www.nickandamy.com/Honeymoon/images/amypalmmoorea.jpg" width="300" height="197"></td> 
+292       <td width="46%"> 
+293         <p align="center"><b>Amy looking cute near the horizontal palm, </b></p> 
+294         <p align="center"><b>Oppuanu Bay, Moorea</b></p> 
+295       </td> 
+296       <td width="1%">&nbsp;</td> 
+297     </tr> 
+298     <tr>  
+299       <td width="53%"> 
+300         <p align="center"><b>At Belevedere Point,</b></p> 
+301         <p align="center"><b>sweet views!!!</b></p> 
+302       </td> 
+303       <td width="46%"><img src="/web/20010203143700im_/http://www.nickandamy.com/Honeymoon/images/belvedere.jpg" width="400" height="219"></td> 
+304       <td width="1%">&nbsp;</td> 
+305     </tr> 
+306     <tr>  
+307       <td width="53%"><img src="/web/20010203143700im_/http://www.nickandamy.com/Honeymoon/images/clubmedbunga.jpg" width="300" height="212"></td> 
+308       <td width="46%"> 
+309         <div align="center"><b>Our bungalow at Club Med.</b></div> 
+310       </td> 
+311       <td width="1%">&nbsp;</td> 
+312     </tr> 
+313   </table> 
+314   <p><b>And the beautiful waterfall on Moorea...</b></p> 
+315   <p><img src="/web/20010203143700im_/http://www.nickandamy.com/Honeymoon/images/waterfall.jpg" width="150" height="450"></p> 
+316   <p>&nbsp;</p> 
+317   <!-- #EndEditable --> </div> 
+318 <map name="Toolbar"> 
+319   <area shape="rect" coords="172,4,290,37" href="/web/20010203143700/http://www.nickandamy.com/Honeymoon/honeymoon.htm"> 
+320   <area shape="rect" coords="448,4,570,37" href="/web/20010203143700/http://www.nickandamy.com/board/?topic=topic1" target="_blank"> 
+321   <area shape="rect" coords="370,4,445,37" href="/web/20010203143700/http://www.nickandamy.com/registry/reg.htm"> 
+322   <area shape="rect" coords="67,3,171,37" href="/web/20010203143700/http://www.nickandamy.com/Wedding/wedding.htm"> 
+323   <area shape="rect" coords="5,3,64,35" href="/web/20010203143700/http://www.nickandamy.com/index.htm"> 
+324 </map> 
+325 </body> 
+326 <!-- #EndTemplate --></html> 
